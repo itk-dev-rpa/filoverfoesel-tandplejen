@@ -29,5 +29,5 @@ def process(orchestrator_connection: OrchestratorConnection, queue_element: Queu
 if __name__ == '__main__':
     conn_string = os.getenv("OpenOrchestratorConnString")
     crypto_key = os.getenv("OpenOrchestratorKey")
-    oc = OrchestratorConnection("Overførsel Test", conn_string, crypto_key, '{"source_folder": "Ny mappe", "target_folder": "Ny mappe (2)"}', "")
+    oc = OrchestratorConnection("Overførsel Test", conn_string, crypto_key, '{"source_folder": "Ny mappe", "target_folder": "Ny mappe (2)"}', "", "")
     process(oc)
