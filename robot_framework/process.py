@@ -1,6 +1,5 @@
 """This module contains the main process of the robot."""
 
-import os
 import shutil
 import json
 from pathlib import Path
