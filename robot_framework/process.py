@@ -18,6 +18,8 @@ def process(orchestrator_connection: OrchestratorConnection, queue_element: Queu
     target_folder = Path(args["target_folder"])
 
     for file in source_folder.iterdir():
+        if not file.is_file():
+            continue
         new_file = target_folder / file.name
         if not new_file.exists():
             orchestrator_connection.log_info(f"Moving file '{file}' to '{new_file}'")
